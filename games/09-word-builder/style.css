@@ -1,0 +1,22 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Comic Sans MS', sans-serif; }
+body { background: #e8eaf6; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
+.game-container { text-align: center; width: 100%; max-width: 500px; }
+
+.navbar { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.nav-btn { padding: 8px 14px; font-size: 1rem; background: #3f51b5; color: white; border: none; border-radius: 12px; cursor: pointer; }
+
+.score-tracker { display: flex; justify-content: space-around; background: white; padding: 10px; border-radius: 12px; margin-bottom: 20px; font-size: 1.1rem; }
+
+.word-display { background: white; border-radius: 20px; padding: 25px; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(0,0,0,0.08); }
+.target-emoji { font-size: 4rem; }
+.word-display h1 { font-size: 2.8rem; letter-spacing: 10px; color: #1a237e; margin-top: 10px; }
+
+.letters-grid { display: flex; justify-content: space-around; gap: 10px; margin-top: 20px; }
+.letter-btn { background: #3f51b5; color: white; border: none; font-size: 2rem; border-radius: 16px; width: 70px; height: 70px; cursor: pointer; box-shadow: 0 6px 0 #1a237e; }
+
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 100; }
+.modal-content { background: white; padding: 25px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; }
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 15px 0; }
+.menu-grid a { background: #f0f0f0; padding: 10px; border-radius: 10px; text-decoration: none; color: #333; font-size: 0.9rem; }
+.close-btn { background: #ff5964; color: white; border: none; padding: 8px 16px; border-radius: 10px; cursor: pointer; }
+.start-btn { background: #06d6a0; color: white; border: none; padding: 10px 20px; border-radius: 12px; font-size: 1.1rem; cursor: pointer; margin-top: 15px; }

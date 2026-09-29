@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toddler Play & Learn Hub</title>
+  <link rel="stylesheet" href="css/hub.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Unlock Audio Overlay -->
+  <div id="start-overlay" class="overlay">
+    <div class="overlay-card">
+      <h1>🎈 Little Explorer World 🎈</h1>
+      <p>Tap anywhere to start playing with audio!</p>
+      <button class="start-btn" id="start-btn">▶ Start Playing</button>
+    </div>
+  </div>
+
+  <div class="hub-container">
+    <header class="hub-header">
+      <h1>🎈 Little Explorer World 🎈</h1>
+      <p>Pick a fun game to start playing!</p>
+    </header>
+
+    <main class="games-grid">
+      <a href="games/01-flip-cards/index.html" class="game-card c-blue">
+        <span class="icon">🎴</span>
+        <h3>Flip Cards</h3>
+        <p>Focus & Memory</p>
+      </a>
+
+      <a href="games/02-find-colors/index.html" class="game-card c-pink">
+        <span class="icon">🎨</span>
+        <h3>Find Colors</h3>
+        <p>Language & Naming</p>
+      </a>
+
+      <a href="games/03-find-numbers/index.html" class="game-card c-yellow">
+        <span class="icon">🔢</span>
+        <h3>Find Numbers</h3>
+        <p>Number Recognition</p>
+      </a>
+
+      <a href="games/04-visual-math/index.html" class="game-card c-green">
+        <span class="icon">🍎</span>
+        <h3>Visual Math</h3>
+        <p>Counting (1–20)</p>
+      </a>
+
+      <a href="games/05-shape-sorter/index.html" class="game-card c-purple">
+        <span class="icon">📐</span>
+        <h3>Shape Sorter</h3>
+        <p>Spatial Awareness</p>
+      </a>
+
+      <a href="games/06-animal-sounds/index.html" class="game-card c-orange">
+        <span class="icon">🦁</span>
+        <h3>Animal Sounds</h3>
+        <p>Listening Session</p>
+      </a>
+
+      <a href="games/07-emotion-match/index.html" class="game-card c-red">
+        <span class="icon">😀</span>
+        <h3>Emotion Match</h3>
+        <p>EQ & Feelings</p>
+      </a>
+
+      <a href="games/08-story-time/index.html" class="game-card c-teal">
+        <span class="icon">📖</span>
+        <h3>Story Time</h3>
+        <p>Story Session</p>
+      </a>
+
+      <a href="games/09-word-builder/index.html" class="game-card c-indigo">
+        <span class="icon">🔤</span>
+        <h3>Word Builder</h3>
+        <p>Language Learning</p>
+      </a>
+
+      <a href="games/10-pattern-pop/index.html" class="game-card c-lime">
+        <span class="icon">🎈</span>
+        <h3>Pattern Pop</h3>
+        <p>Analytical Thinking</p>
+      </a>
+    </main>
+
+    <footer class="hub-footer">
+      <p>Made for Toddlers | Early Skill Builder Platform</p>
+    </footer>
+  </div>
+
+  <script src="shared/audio-helper.js"></script>
+  <script src="js/hub.js"></script>
+</body>
+</html>

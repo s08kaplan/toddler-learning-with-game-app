@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Match</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <div class="game-container">
+    <header class="navbar">
+      <button class="nav-btn" onclick="location.href='../../index.html'">🏠 Home</button>
+      <button class="nav-btn" onclick="toggleMenu()">☰ Games</button>
+      <button class="nav-btn" id="mute-btn" onclick="toggleMute()">🔊 Audio</button>
+    </header>
+
+    <div class="score-tracker">
+      <span>Score: <b id="score-correct">0</b> ✅</span>
+      <span>Tries: <b id="score-attempts">0</b>/5</span>
+    </div>
+
+    <h1 id="prompt">Who feels Happy?</h1>
+    <div class="emotions-grid" id="emotions-grid"></div>
+
+    <div id="menu-modal" class="modal">
+      <div class="modal-content">
+        <h2>Choose a Game</h2>
+        <div class="menu-grid">
+          <a href="../01-flip-cards/index.html">🎴 Flip Cards</a>
+          <a href="../02-find-colors/index.html">🎨 Find Colors</a>
+          <a href="../03-find-numbers/index.html">🔢 Find Numbers</a>
+          <a href="../04-visual-math/index.html">🍎 Visual Math</a>
+          <a href="../05-shape-sorter/index.html">📐 Shape Sorter</a>
+          <a href="../06-animal-sounds/index.html">🦁 Animal Sounds</a>
+          <a href="../07-emotion-match/index.html">😀 Emotion Match</a>
+          <a href="../08-story-time/index.html">📖 Story Time</a>
+          <a href="../09-word-builder/index.html">🔤 Word Builder</a>
+          <a href="../10-pattern-pop/index.html">🎈 Pattern Pop</a>
+        </div>
+        <button class="close-btn" onclick="toggleMenu()">Close</button>
+      </div>
+    </div>
+
+    <div id="results-modal" class="modal">
+      <div class="modal-content">
+        <h2>Great Job! 🎉</h2>
+        <p id="results-summary">You answered 0 correctly!</p>
+        <button class="start-btn" onclick="location.href='../../index.html'">Back to Hub</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../shared/audio-helper.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

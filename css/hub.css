@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+}
+
+body {
+  background: #f4f9ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.start-btn {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.4rem;
+  background: #ff5964;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #d63031;
+}
+
+.hub-container {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.hub-header h1 {
+  font-size: 2.5rem;
+  color: #2b2d42;
+  margin-bottom: 8px;
+}
+
+.hub-header p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+/* Responsive Grid to guarantee visibility of all 10 cards */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.game-card {
+  text-decoration: none;
+  padding: 20px 15px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 0 rgba(0,0,0,0.15);
+  cursor: pointer;
+  user-select: none;
+}
+
+.game-card .icon { font-size: 3rem; margin-bottom: 8px; }
+.game-card h3 { font-size: 1.2rem; margin-bottom: 4px; }
+.game-card p { font-size: 0.85rem; opacity: 0.95; }
+
+.c-blue { background: #4ea8de; }
+.c-pink { background: #ff70a6; }
+.c-yellow { background: #ffb703; color: #333; }
+.c-green { background: #06d6a0; }
+.c-purple { background: #9d4edd; }
+.c-orange { background: #fb8500; }
+.c-red { background: #e63946; }
+.c-teal { background: #2a9d8f; }
+.c-indigo { background: #4361ee; }
+.c-lime { background: #70e000; color: #222; }
+
+.hub-footer {
+  color: #8d99ae;
+  font-size: 0.9rem;
+  padding: 10px 0;
+}

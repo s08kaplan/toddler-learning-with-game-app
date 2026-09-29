@@ -1,0 +1,20 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Comic Sans MS', sans-serif; }
+body { background: #fff3e0; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
+.game-container { text-align: center; width: 100%; max-width: 500px; }
+
+.navbar { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.nav-btn { padding: 8px 14px; font-size: 1rem; background: #ef6c00; color: white; border: none; border-radius: 12px; cursor: pointer; }
+
+.score-tracker { display: flex; justify-content: space-around; background: white; padding: 10px; border-radius: 12px; margin-bottom: 20px; font-size: 1.1rem; }
+
+.sound-play-btn { background: #ef6c00; color: white; border: none; padding: 15px 30px; border-radius: 16px; font-size: 1.2rem; cursor: pointer; margin-bottom: 25px; box-shadow: 0 6px 0 #e65100; }
+
+.animals-grid { display: flex; justify-content: space-around; gap: 15px; }
+.animal-card { background: white; padding: 20px; border-radius: 20px; font-size: 3.5rem; cursor: pointer; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 100px; text-align: center; }
+
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 100; }
+.modal-content { background: white; padding: 25px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; }
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 15px 0; }
+.menu-grid a { background: #f0f0f0; padding: 10px; border-radius: 10px; text-decoration: none; color: #333; font-size: 0.9rem; }
+.close-btn { background: #ff5964; color: white; border: none; padding: 8px 16px; border-radius: 10px; cursor: pointer; }
+.start-btn { background: #06d6a0; color: white; border: none; padding: 10px 20px; border-radius: 12px; font-size: 1.1rem; cursor: pointer; margin-top: 15px; }
