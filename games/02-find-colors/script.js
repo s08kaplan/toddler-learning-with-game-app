@@ -1,8 +1,24 @@
 const colors = [
-  { name: 'Red', hex: '#FF4D4D' },
-  { name: 'Blue', hex: '#4D94FF' },
-  { name: 'Yellow', hex: '#FFD700' },
-  { name: 'Green', hex: '#6BCB77' }
+  { name: 'Red', hex: '#E53935' },
+  { name: 'Blue', hex: '#1E88E5' },
+  { name: 'Yellow', hex: '#FDD835' },
+  { name: 'Green', hex: '#43A047' },
+  { name: 'Orange', hex: '#FB8C00' },
+  { name: 'Purple', hex: '#8E24AA' },
+  { name: 'Pink', hex: '#F06292' },
+  { name: 'Brown', hex: '#6D4C41' },
+  { name: 'Cyan', hex: '#00ACC1' },
+  { name: 'Lime', hex: '#C0CA33' },
+  { name: 'Teal', hex: '#00897B' },
+  { name: 'Indigo', hex: '#3949AB' },
+  { name: 'Gold', hex: '#FFB300' },
+  { name: 'Maroon', hex: '#880E4F' },
+  { name: 'Coral', hex: '#FF7043' },
+  { name: 'Mint Green', hex: '#A5D6A7' },
+  { name: 'Lavender', hex: '#CE93D8' },
+  { name: 'Peach', hex: '#FFCC80' },
+  { name: 'Olive', hex: '#9E9D24' },
+  { name: 'Sky Blue', hex: '#81D4FA' }
 ];
 
 let targetColor;

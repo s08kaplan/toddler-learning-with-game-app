@@ -2,7 +2,23 @@ const words = [
   { word: 'CAT', missing: 'A', display: 'C _ T', emoji: '🐱' },
   { word: 'DOG', missing: 'O', display: 'D _ G', emoji: '🐶' },
   { word: 'SUN', missing: 'U', display: 'S _ N', emoji: '☀️' },
-  { word: 'BUS', missing: 'U', display: 'B _ S', emoji: '🚌' }
+  { word: 'BUS', missing: 'U', display: 'B _ S', emoji: '🚌' },
+  { word: 'ARM', missing: 'A', display: '_ R M', emoji: '🦾' },
+  { word: 'EYE', missing: 'E', display: 'E Y _', emoji: '👁️' },
+  { word: 'NOSE', missing: 'S', display: 'N O _ E', emoji: '👃' },
+  { word: 'DOOR', missing: 'D', display: '_ O O R', emoji: '🚪' },
+  { word: 'WINDOW', missing: 'N', display: 'W I _ D O W', emoji: '🪟' },
+  { word: 'FISH', missing: 'I', display: 'F _ S H', emoji: '🐟' },
+  { word: 'BIRD', missing: 'R', display: 'B I _ D', emoji: '🐦' },
+  { word: 'FROG', missing: 'O', display: 'F R _ G', emoji: '🐸' },
+  { word: 'DUCK', missing: 'U', display: 'D _ C K', emoji: '🦆' },
+  { word: 'LION', missing: 'I', display: 'L _ O N', emoji: '🦁' },
+  { word: 'BEAR', missing: 'A', display: 'B E _ R', emoji: '🐻' },
+  { word: 'STAR', missing: 'T', display: 'S _ A R', emoji: '⭐' },
+  { word: 'MOON', missing: 'O', display: 'M _ O N', emoji: '🌙' },
+  { word: 'TREE', missing: 'E', display: 'T R _ E', emoji: '🌳' },
+  { word: 'BOOK', missing: 'O', display: 'B _ O K', emoji: '📖' },
+  { word: 'BALL', missing: 'A', display: 'B _ L L', emoji: '⚽' }
 ];
 
 let currentWordItem;

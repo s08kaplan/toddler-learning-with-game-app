@@ -1,8 +1,24 @@
 const animals = [
-  { name: 'Dog', icon: '🐶', soundText: 'Woof woof!' },
-  { name: 'Cat', icon: '🐱', soundText: 'Meow meow!' },
-  { name: 'Cow', icon: '🐮', soundText: 'Moo moo!' },
-  { name: 'Duck', icon: '🦆', soundText: 'Quack quack!' }
+  { name: 'Cat', soundText: 'Meow! Meow!', emoji: '🐱' },
+  { name: 'Dog', soundText: 'Woof! Woof!', emoji: '🐶' },
+  { name: 'Duck', soundText: 'Quack! Quack!', emoji: '🦆' },
+  { name: 'Cow', soundText: 'Moo! Moo!', emoji: '🐮' },
+  { name: 'Lion', soundText: 'Roar! Roar!', emoji: '🦁' },
+  { name: 'Frog', soundText: 'Ribbit! Ribbit!', emoji: '🐸' },
+  { name: 'Pig', soundText: 'Oink! Oink!', emoji: '🐷' },
+  { name: 'Sheep', soundText: 'Baa! Baa!', emoji: '🐑' },
+  { name: 'Rooster', soundText: 'Cock-a-doodle-doo!', emoji: '🐓' },
+  { name: 'Owl', soundText: 'Hoot! Hoot!', emoji: '🦉' },
+  { name: 'Bee', soundText: 'Buzz! Buzz!', emoji: '🐝' },
+  { name: 'Snake', soundText: 'Hiss! Hiss!', emoji: '🐍' },
+  { name: 'Monkey', soundText: 'Ooh ooh ah ah!', emoji: '🐒' },
+  { name: 'Elephant', soundText: 'Trumpet!', emoji: '🐘' },
+  { name: 'Horse', soundText: 'Neigh! Neigh!', emoji: '🐴' },
+  { name: 'Mouse', soundText: 'Squeak! Squeak!', emoji: '🐭' },
+  { name: 'Bear', soundText: 'Grrr!', emoji: '🐻' },
+  { name: 'Wolf', soundText: 'Awoo!', emoji: '🐺' },
+  { name: 'Chick', soundText: 'Cheep! Cheep!', emoji: '🐥' },
+  { name: 'Goat', soundText: 'Bleat! Bleat!', emoji: '🐐' }
 ];
 
 let targetAnimal;
@@ -66,4 +82,4 @@ function toggleMute() {
   document.getElementById('mute-btn').textContent = isMuted ? '🔇 Muted' : '🔊 Audio';
 }
 
-document.addEventListener('DOMContentLoaded', startRound);
+document.addEventListener('DOMContentLoaded', startRound)
