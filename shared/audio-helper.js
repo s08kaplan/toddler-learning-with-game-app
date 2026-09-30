@@ -4,21 +4,31 @@ class AudioHelper {
   
   static initAudio() {
     if (!AudioHelper.audioCtx) {
-      AudioHelper.audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+      AudioHelper.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
     if (AudioHelper.audioCtx.state === 'suspended') {
       AudioHelper.audioCtx.resume();
+    }
+    // Resume SpeechSynthesis engine if paused by browser
+    if ('speechSynthesis' in window && window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
     }
   }
   
   static speak(text, rate = 0.85) {
     if (AudioHelper.isMuted) return;
     if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
+      AudioHelper.initAudio();
+      window.speechSynthesis.cancel(); // Clear queued speech
+      
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.rate = rate;
       utterance.pitch = 1.2;
-      window.speechSynthesis.speak(utterance);
+      
+      // Brief timeout prevents browser speech engine lockups on fast clicks
+      setTimeout(() => {
+        window.speechSynthesis.speak(utterance);
+      }, 50);
     }
   }
   

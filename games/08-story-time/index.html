@@ -9,6 +9,14 @@
 </head>
 <body>
   <div class="game-container">
+    <!-- Start Overlay to unblock Browser Audio Autoplay -->
+    <div id="start-overlay" class="modal" style="display: flex;">
+      <div class="modal-content">
+        <h2>Ready for Story Time? 📖</h2>
+        <button class="start-btn" onclick="initAndStartGame()">▶️ Tap to Play</button>
+      </div>
+    </div>
+
     <header class="navbar">
       <button class="nav-btn" onclick="location.href='../../index.html'">🏠 Home</button>
       <button class="nav-btn" onclick="toggleMenu()">☰ Games</button>
@@ -22,7 +30,9 @@
 
     <div class="story-box">
       <div id="story-emoji" class="story-emoji">🐶</div>
-      <p id="story-text">The happy puppy loves to play in the park!</p>
+      <p id="story-text">Tap start to listen to the story!</p>
+      <!-- Listen Again Button for Toddlers -->
+      <button class="nav-btn" onclick="repeatStory()" style="margin-top: 10px;">🔊 Listen Again</button>
     </div>
 
     <h2 id="prompt">What was in the story?</h2>

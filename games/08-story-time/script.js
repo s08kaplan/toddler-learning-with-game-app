@@ -35,9 +35,19 @@ let currentStory;
 let correctAnswers = 0;
 let totalAttempts = 0;
 const maxAttempts = 5;
+let isGameStarted = false;
+
+// Call this from a user click gesture (e.g., "Start Game" button)
+function initAndStartGame() {
+  AudioHelper.initAudio();
+  document.getElementById('start-overlay').style.display = 'none';
+  isGameStarted = true;
+  startRound();
+}
 
 function startRound() {
-  AudioHelper.initAudio();
+  if (!isGameStarted) return;
+
   if (totalAttempts >= maxAttempts) {
     document.getElementById('results-summary').textContent = `Story time complete! You answered ${correctAnswers} questions!`;
     document.getElementById('results-modal').style.display = 'flex';
@@ -53,6 +63,7 @@ function startRound() {
   document.getElementById('story-emoji').textContent = '📖';
   document.getElementById('story-text').textContent = currentStory.text;
   
+  // Audio trigger
   AudioHelper.speak(currentStory.text);
   
   currentStory.options.forEach(emoji => {
@@ -64,6 +75,12 @@ function startRound() {
   });
   
   gsap.from('.choice-card', { scale: 0, duration: 0.4, stagger: 0.1, ease: 'back.out' });
+}
+
+function repeatStory() {
+  if (currentStory && currentStory.text) {
+    AudioHelper.speak(currentStory.text);
+  }
 }
 
 function checkChoice(selectedEmoji, card) {
@@ -91,5 +108,3 @@ function toggleMute() {
   const isMuted = AudioHelper.toggleMute();
   document.getElementById('mute-btn').textContent = isMuted ? '🔇 Muted' : '🔊 Audio';
 }
-
-document.addEventListener('DOMContentLoaded', startRound);
