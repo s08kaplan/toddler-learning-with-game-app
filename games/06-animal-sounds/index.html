@@ -9,6 +9,14 @@
 </head>
 <body>
   <div class="game-container">
+    <!-- Start Overlay for Browser Speech Policy -->
+    <div id="start-overlay" class="modal" style="display: flex;">
+      <div class="modal-content">
+        <h2>Who Makes This Sound? 🦁</h2>
+        <button class="start-btn" onclick="initAndStartGame()">▶️ Tap to Play</button>
+      </div>
+    </div>
+
     <header class="navbar">
       <button class="nav-btn" onclick="location.href='../../index.html'">🏠 Home</button>
       <button class="nav-btn" onclick="toggleMenu()">☰ Games</button>

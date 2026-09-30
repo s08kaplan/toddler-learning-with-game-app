@@ -25,9 +25,19 @@ let targetAnimal;
 let correctAnswers = 0;
 let totalAttempts = 0;
 const maxAttempts = 5;
+let isGameStarted = false;
+
+// Call this from the "Tap to Play" button to unblock Browser Speech Synthesis
+function initAndStartGame() {
+  AudioHelper.initAudio();
+  document.getElementById('start-overlay').style.display = 'none';
+  isGameStarted = true;
+  startRound();
+}
 
 function startRound() {
-  AudioHelper.initAudio();
+  if (!isGameStarted) return;
+
   if (totalAttempts >= maxAttempts) {
     document.getElementById('results-summary').textContent = `Game ended! You knew ${correctAnswers} animal sounds!`;
     document.getElementById('results-modal').style.display = 'flex';
@@ -44,17 +54,24 @@ function startRound() {
   shuffled.forEach(item => {
     const card = document.createElement('div');
     card.classList.add('animal-card');
-    card.textContent = item.icon;
+    
+    // FIX: Changed item.icon -> item.emoji so emojis render properly
+    card.textContent = item.emoji;
+    
     card.onclick = () => checkChoice(item, card);
     grid.appendChild(card);
   });
   
   gsap.from('.animal-card', { scale: 0, duration: 0.4, stagger: 0.1, ease: 'back.out' });
+  
+  // Play animal sound when round starts
   playCurrentSound();
 }
 
 function playCurrentSound() {
-  AudioHelper.speak(targetAnimal.soundText);
+  if (targetAnimal && targetAnimal.soundText) {
+    AudioHelper.speak(targetAnimal.soundText);
+  }
 }
 
 function checkChoice(selected, card) {
@@ -81,5 +98,3 @@ function toggleMute() {
   const isMuted = AudioHelper.toggleMute();
   document.getElementById('mute-btn').textContent = isMuted ? '🔇 Muted' : '🔊 Audio';
 }
-
-document.addEventListener('DOMContentLoaded', startRound)
