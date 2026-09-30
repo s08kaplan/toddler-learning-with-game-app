@@ -1,7 +1,34 @@
 const patterns = [
   { sequence: ['🔴', '🟡', '🔴', '?'], answer: '🟡', options: ['🟡', '🟢', '🔴'] },
   { sequence: ['⭐', '🎈', '⭐', '?'], answer: '🎈', options: ['⭐', '🎈', '🍎'] },
-  { sequence: ['🍎', '🍏', '🍎', '?'], answer: '🍏', options: ['🍏', '🍎', '🍌'] }
+  { sequence: ['🍎', '🍏', '🍎', '?'], answer: '🍏', options: ['🍏', '🍎', '🍌'] },
+  { sequence: ['🐶', '🐱', '🐶', '?'], answer: '🐱', options: ['🐱', '🐶', '🐭'] },
+  { sequence: ['🚗', '🚕', '🚗', '?'], answer: '🚕', options: ['🚕', '🚗', '🚓'] },
+  { sequence: ['🌞', '🌙', '🌞', '?'], answer: '🌙', options: ['🌙', '🌞', '⭐'] },
+  { sequence: ['⚽', '🏀', '⚽', '?'], answer: '🏀', options: ['🏀', '⚽', '⚾'] },
+  { sequence: ['🍦', '🍩', '🍦', '?'], answer: '🍩', options: ['🍩', '🍦', '🍰'] },
+  { sequence: ['🐸', '🦆', '🐸', '?'], answer: '🦆', options: ['🦆', '🐸', '🐟'] },
+  { sequence: ['🌸', '🌻', '🌸', '?'], answer: '🌻', options: ['🌻', '🌸', '🌹'] },
+  { sequence: ['🟦', '🟩', '🟦', '?'], answer: '🟩', options: ['🟩', '🟦', '🟨'] },
+  { sequence: ['🚌', '🚲', '🚌', '?'], answer: '🚲', options: ['🚲', '🚌', '🚂'] },
+  { sequence: ['🍕', '🍔', '🍕', '?'], answer: '🍔', options: ['🍔', '🍕', '🌭'] },
+  { sequence: ['🦁', '🐯', '🦁', '?'], answer: '🐯', options: ['🐯', '🦁', '🐻'] },
+  { sequence: ['💎', '👑', '💎', '?'], answer: '👑', options: ['👑', '💎', '💍'] },
+  { sequence: ['🍇', '🍓', '🍇', '?'], answer: '🍓', options: ['🍓', '🍇', '🍒'] },
+  { sequence: ['✈️', '🚁', '✈️', '?'], answer: '🚁', options: ['🚁', '✈️', '🚀'] },
+  { sequence: ['🐵', '🍌', '🐵', '?'], answer: '🍌', options: ['🍌', '🐵', '🍏'] },
+  { sequence: ['🔔', '🎵', '🔔', '?'], answer: '🎵', options: ['🎵', '🔔', '🎶'] },
+  { sequence: ['🔺', '🔹', '🔺', '?'], answer: '🔹', options: ['🔹', '🔺', '🔸'] },
+  { sequence: ['🐰', '🥕', '🐰', '?'], answer: '🥕', options: ['🥕', '🐰', '🥬'] },
+  { sequence: ['🍪', '🥛', '🍪', '?'], answer: '🥛', options: ['🥛', '🍪', '🧃'] },
+  { sequence: ['🐝', '🍯', '🐝', '?'], answer: '🍯', options: ['🍯', '🐝', '🌺'] },
+  { sequence: ['⛵', '🌊', '⛵', '?'], answer: '🌊', options: ['🌊', '⛵', '⚓'] },
+  { sequence: ['🐠', '🐙', '🐠', '?'], answer: '🐙', options: ['🐙', '🐠', '🦀'] },
+  { sequence: ['🎨', '🖌️', '🎨', '?'], answer: '🖌️', options: ['🖌️', '🎨', '✏️'] },
+  { sequence: ['🐥', '🥚', '🐥', '?'], answer: '🥚', options: ['🥚', '🐥', '🪺'] },
+  { sequence: ['🌈', '☁️', '🌈', '?'], answer: '☁️', options: ['☁️', '🌈', '🌧️'] },
+  { sequence: ['🚀', '🪐', '🚀', '?'], answer: '🪐', options: ['🪐', '🚀', '☄️'] },
+  { sequence: ['🐼', '🎋', '🐼', '?'], answer: '🎋', options: ['🎋', '🐼', '🌿'] }
 ];
 
 let currentPattern;

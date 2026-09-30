@@ -2,9 +2,34 @@ const emotions = [
   { name: 'Happy', icon: '😀' },
   { name: 'Sad', icon: '😢' },
   { name: 'Surprised', icon: '😲' },
-  { name: 'Silly', icon: '🤪' }
+  { name: 'Silly', icon: '🤪' },
+  { name: 'Angry', icon: '😡' },
+  { name: 'Excited', icon: '🤩' },
+  { name: 'Sleepy', icon: '😴' },
+  { name: 'Cool', icon: '😎' },
+  { name: 'Scared', icon: '😨' },
+  { name: 'Loving', icon: '🥰' },
+  { name: 'Winking', icon: '😜' },
+  { name: 'Shy', icon: '😳' },
+  { name: 'Bored', icon: '😑' },
+  { name: 'Confused', icon: '😕' },
+  { name: 'Sick', icon: '🤒' },
+  { name: 'Proud', icon: '😌' },
+  { name: 'Thinking', icon: '🤔' },
+  { name: 'Quiet', icon: '🤫' },
+  { name: 'Hungry', icon: '🤤' },
+  { name: 'Loughing', icon: '😂' },
+  { name: 'Naughty', icon: '😈' },
+  { name: 'Nervous', icon: '😬' },
+  { name: 'Peaceful', icon: '😇' },
+  { name: 'Yawning', icon: '🥱' },
+  { name: 'Freezing', icon: '🥶' },
+  { name: 'Hot', icon: '🥵' },
+  { name: 'Worried', icon: '😟' },
+  { name: 'Shocked', icon: '😱' },
+  { name: 'Giggling', icon: '🤭' },
+  { name: 'Dizzy', icon: '😵' }
 ];
-
 let targetEmotion;
 let correctAnswers = 0;
 let totalAttempts = 0;
