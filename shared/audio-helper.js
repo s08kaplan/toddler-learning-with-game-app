@@ -1,11 +1,11 @@
 class AudioHelper {
   static isMuted = false;
   static audioCtx = null;
-  static currentUtterance = null; 
+  static currentUtterance = null;
   static voicesLoaded = false;
 
   static initAudio() {
-   
+  
     if (!AudioHelper.audioCtx) {
       AudioHelper.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     }
@@ -13,7 +13,6 @@ class AudioHelper {
       AudioHelper.audioCtx.resume();
     }
 
-    // 2. Pre-load SpeechSynthesis Voices
     if ('speechSynthesis' in window) {
       if (window.speechSynthesis.paused) {
         window.speechSynthesis.resume();
@@ -33,33 +32,33 @@ class AudioHelper {
     }
   }
 
-  static speak(text, rate = 0.85) {
+  static speak(text, rate = 0.6) {
     if (AudioHelper.isMuted) return;
 
     if ('speechSynthesis' in window) {
-      
       AudioHelper.initAudio();
 
-      // Clear previous queue and resume if stuck
       window.speechSynthesis.cancel();
       window.speechSynthesis.resume();
 
-    
       AudioHelper.currentUtterance = new SpeechSynthesisUtterance(text);
+      
       AudioHelper.currentUtterance.rate = rate;
-      AudioHelper.currentUtterance.pitch = 1.2;
+      AudioHelper.currentUtterance.pitch = 1.1; 
+      AudioHelper.currentUtterance.lang = 'en-US';
 
       const voices = window.speechSynthesis.getVoices();
       if (voices.length > 0) {
-        const englishVoice = voices.find(v => v.lang.startsWith('en')) || voices[0];
+        const englishVoice = voices.find(v => v.lang.startsWith('en-US') || v.lang.startsWith('en')) || voices[0];
         if (englishVoice) {
           AudioHelper.currentUtterance.voice = englishVoice;
         }
       }
 
+      // Small delay prevents audio pipeline collisions in Chrome/Safari
       setTimeout(() => {
         window.speechSynthesis.speak(AudioHelper.currentUtterance);
-      }, 50);
+      }, 80);
     }
   }
 
