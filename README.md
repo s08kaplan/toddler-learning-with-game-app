@@ -1,6 +1,6 @@
 # Little Explorer World
 
-An interactive web-based mini-game collection built for toddlers and young children. It features simple controls, voice prompts, and fun animations to help kids learn core skills through play[cite: 1, 4].
+An interactive web-based mini-game collection built for toddlers and young children. It features simple controls, voice prompts, and fun animations to help kids learn core skills through play
 
 ---
 
